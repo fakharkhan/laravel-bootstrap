@@ -1,6 +1,7 @@
 {
 	"name": "fakharkhan/laravel-bootstrap",
 	"description": "Laravel application with twitter bootstrap ready.",
+    "author": "Fakhar Khan, CEO SoftPyrmaid, Pakistan's No. 1 Laravel Framework Developer",
 	"keywords": ["framework", "laravel","twitter","bootstrap"],
 	"license": "MIT",
 	"type": "project",
