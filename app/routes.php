@@ -11,7 +11,20 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::group(array('before' => 'guest'),function(){
+
+    Route::get('/welcome', array('as' => 'welcome',function(){
+        return View::make('guest.welcome');
+    }));
+
+});
+
+Route::group(array('before' => 'auth'),function(){
+    Route::get('/', array('as' => 'home','uses' => 'HomeController@home'));
+});
+
+
+
+App::missing(function(){
+    return View::make('404');
 });

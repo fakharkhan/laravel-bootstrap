@@ -28,4 +28,7 @@ return array(
 
 	'pagination' => 'pagination::slider-3',
 
+    //if you want to switch bootstrap, just update the following node
+    'bootstrap' => '/assets/bootstrap-3.2.0',
+
 );
