@@ -25,6 +25,7 @@ Route::group(array('before' => 'guest'),function(){
 
 Route::group(array('before' => 'auth'),function(){
     Route::get('/', array('as' => 'home','uses' => 'HomeController@home'));
+    Route::get('/logout',array('as' => 'logout','uses' => 'AuthController@logout'));
 });
 
 
