@@ -17,7 +17,11 @@ Route::group(array('before' => 'guest'),function(){
         return View::make('guest.welcome');
     }));
 
+    Route::get('/login',array('as' => 'login','uses' => 'AuthController@login'));
+    Route::post('/login',array('as' => 'doLogin','uses' => 'AuthController@doLogin'));
+
 });
+
 
 Route::group(array('before' => 'auth'),function(){
     Route::get('/', array('as' => 'home','uses' => 'HomeController@home'));
